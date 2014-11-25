@@ -29,11 +29,10 @@
         <div class="panel panel-primary">
           <div class="panel-heading">Login Form</div>
           <div class="panel-body">
-            @if(Session::has('error')){
+            @if(Session::has('error'))
               <div class="alert alert-danger">
                 {{ Session::get('error') }}
               </div>
-            }
             @endif
             {{ Form::open(['url' => Request::url(), 'class' => 'form-horizontal', 'method'=>'post']) }}
 
