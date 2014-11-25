@@ -76,11 +76,21 @@ Route::group(['prefix'=>'exercises'], function(){
     return View::make('pages.6');
   });
   Route::get('7', function(){
-    return View::make('pages.7');
+    $canvasEntities = CanvasEntity::all();
+    return View::make('pages.7')->with('canvasEntities', $canvasEntities);
   });
   Route::post('7', function(){
     // Update entities
-    
+    $canvasEntities = Input::get('canvasEntities');
+    foreach ($canvasEntities as $canvasEntity) {
+      $ce = CanvasEntity::find($canvasEntity["id"]);
+      $ce->x = $canvasEntity["x"];
+      $ce->y = $canvasEntity["y"];
+      $ce->dx = $canvasEntity["dx"];
+      $ce->dy = $canvasEntity["dy"];
+      $ce->save();
+    }
+    return "All good!";
   });
   Route::get('8', function(){
     return View::make('pages.8');

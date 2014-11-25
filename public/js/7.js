@@ -2,6 +2,7 @@ var CanvasExercise = function(canvasId, entityCollection){
   var that = this;
 
   this.entityCollection = entityCollection || [];
+  console.log(this.entityCollection.length);
   this.updateMotion = function(){
     that.ct.clearRect(0, 0, that.canvas.width(), that.canvas.height());
     that.entityCollection.map(function(entity){
@@ -17,14 +18,31 @@ var CanvasExercise = function(canvasId, entityCollection){
       that.ct.stroke();
     });
   }
-  this.beforeUnload = function(){
-    $.post('/exercises/5', that.entityCollection);
+  this.serverSync = function(){
+    $.post('/exercises/7', {"canvasEntities":that.entityCollection}, "json");
+    // $.post('/exercises/7', that.entityCollection, "json");
+   //  $.ajax({
+   //    type: "POST",
+   //    contentType: "application/json",
+   //    url: '/exercises/7',
+   //    data: {"canvasEntities":that.entityCollection},
+   //    dataType: "json"
+   // });
+    // $.ajax({
+    //     url: '/exercises/7',
+    //     type: 'POST',
+    //     dataType: 'json',
+    //     data: {"canvasEntities":that.entityCollection},
+    //     contentType: 'application/json; charset=utf-8',
+    //     success: function(result) {
+    //         // alert(result.Result);
+    //     }
+    // });
   }
   $(function(){
     that.canvas = $(canvasId);
     that.ct = that.canvas[0].getContext('2d');
-    console.log(that.ct);
     setInterval(that.updateMotion, 33);
-    window.onbeforeunload = that.beforeUnload;
+    setInterval(that.serverSync, 5000);
   });
 }
