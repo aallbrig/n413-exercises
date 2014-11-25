@@ -1,0 +1,7 @@
+.menu {
+  cursor: pointer;
+}
+.active {
+  border: 2px solid red;
+  background-color: pink;
+}

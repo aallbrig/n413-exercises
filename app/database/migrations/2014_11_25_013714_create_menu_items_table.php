@@ -17,6 +17,10 @@ class CreateMenuItemsTable extends Migration {
 			$table->increments('id');
 			$table->string('displayText');
 			$table->string('href');
+			// Added for exercise 3
+			$table->string('contentType');
+			$table->text('content');
+			// end add for exercise 3
 			$table->timestamps();
 		});
 	}

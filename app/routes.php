@@ -19,7 +19,20 @@ Route::group(['prefix'=>'exercises'], function(){
                                 ->with('subMenu', $subMenu);
   });
   Route::get('3', function(){
-    return View::make('pages.3');
+    $menu = Menu::find(1);
+    $subMenu = Menu::find(2);
+    $menu->menuItems;
+    $subMenu->menuItems;
+    if(Input::get('id')){
+      try {
+        $content = MenuItem::find(Input::get('id'))->content;
+      } catch (Exception $e) {
+        
+      }
+    }
+    return View::make('pages.3')->with('menu', $menu)
+                                ->with('subMenu', $subMenu)
+                                ->with('content', $content);
   });
   Route::get('4', function(){
     return View::make('pages.4');

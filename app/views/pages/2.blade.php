@@ -40,7 +40,7 @@
     <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/app/database/seeds/MenusTableSeeder.php">Menu Seeder</a></li>
     <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/app/database/seeds/MenuItemsTableSeeder.php">Menu Item Seeder</a></li>
     <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/app/database/seeds/MenusMenuItemsTableSeeder.php">Menu Menu Item Seeder (pivot table seeder)</a></li>
-    <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/app/views/pages/2.blade.php">Exercise 1 page template</a></li>
+    <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/app/views/pages/2.blade.php">Exercise 2 page template</a></li>
     <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/public/js/2.js">Exercise 2 javascript</a></li>
     <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/public/css/2.css">Exercise 2 css</a></li>
   </ol>

@@ -12,7 +12,7 @@ class MenusMenuItemsTableSeeder extends Seeder {
     {
       $menu = Menu::find($i);
       foreach (range(1, 10) as $j) {
-        $menu->menuItems()->attach($j * $i); 
+        $menu->menuItems()->attach($j + (($i-1) * 10)); 
       }
     }
   }

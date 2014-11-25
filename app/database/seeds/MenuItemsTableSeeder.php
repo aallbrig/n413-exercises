@@ -13,7 +13,11 @@ class MenuItemsTableSeeder extends Seeder {
 		{
 			MenuItem::create([
         'displayText' => $faker->name,
-        'href' => "/"
+        'href' => "/",
+        // Added for exercise 3
+				'contentType'=>'text',
+				'content'=>$faker->paragraph(rand(1, 10))
+				// end added for exercise 3
 			]);
 		}
 	}
