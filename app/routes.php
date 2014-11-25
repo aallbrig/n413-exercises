@@ -6,7 +6,9 @@ Route::get('/', function(){
 
 Route::group(['prefix'=>'exercises'], function(){
   Route::get('1', function(){
-    return View::make('pages.1');
+    $menu = Menu::find(1);
+    $menuItems = $menu->menuItems;
+    return View::make('pages.1')->with('menu', $menu);
   });
   Route::get('2', function(){
     return View::make('pages.2');

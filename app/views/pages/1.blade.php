@@ -15,12 +15,16 @@
     </ol>
   </p>
   <h3>Result</h3>
-  <div id="menu"><i class="fa fa-bars fa-2x"></i></div>
+  <div id="menu"><i class="fa fa-bars fa-2x"></i> {{ $menu->name }} Menu</div>
   <div id="container" class="hidden">
-    I'm showing!
+    <ol>
+      @foreach($menu->menuItems as $menuItem)
+      <li><a href="{{$menuItem->href}}">{{$menuItem->displayText}}</a></li>
+      @endforeach
+    </ol>
   </div>
   <h3>Source</h3>
-
+  
 @stop
 
 @section('scripts')
