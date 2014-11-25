@@ -7,7 +7,7 @@
     <ol>
       <li><a href="exercises/1">Menu exercise</a></li>
       <li><a href="exercises/2">Menu with sub menu exercise</a></li>
-      <li><a href="exercises/3">Log in exercise</a></li>
+      <li><a href="exercises/3">Sub Menu With Content exercise</a></li>
       <li><a href="exercises/4">Log in exercise</a></li>
       <li><a href="exercises/5">Session expiration exercise</a></li>
       <li><a href="exercises/6">Password Encryption and Account Creation</a></li>
