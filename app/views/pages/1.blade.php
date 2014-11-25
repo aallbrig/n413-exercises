@@ -24,7 +24,17 @@
     </ol>
   </div>
   <h3>Source</h3>
-  
+  <ol>
+    <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/app/database/migrations/2014_11_25_013557_create_menus_table.php">Menu Migration</a></li>
+    <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/app/database/migrations/2014_11_25_013714_create_menu_items_table.php">Menu Item Migration</a></li>
+    <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/app/database/migrations/2014_11_25_013750_create_menu_menu_item_table.php">Menu Menu Item Migration (pivot table definition)</a></li>
+    <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/app/database/seeds/MenusTableSeeder.php">Menu Seeder</a></li>
+    <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/app/database/seeds/MenuItemsTableSeeder.php">Menu Item Seeder</a></li>
+    <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/app/database/seeds/MenusMenuItemsTableSeeder.php">Menu Menu Item Seeder (pivot table seeder)</a></li>
+    <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/app/views/pages/1.blade.php">Exercise 1 page template</a></li>
+    <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/public/js/1.js">Exercise 1 javascript</a></li>
+    <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/public/css/1.css">Exercise 1 css</a></li>
+  </ol>
 @stop
 
 @section('scripts')
