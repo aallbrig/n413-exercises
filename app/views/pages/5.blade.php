@@ -35,7 +35,7 @@
   <ol>
     <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/app/views/pages/5.blade.php">Exercise 5 page template</a></li>
     <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/app/routes.php">Routes file (look for GET/POST for '5')</a></li>
-    <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/public/js/5.js"></a></li>
+    <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/public/js/5.js">Javascript for exercise 5</a></li>
   </ol>
 @stop
 
