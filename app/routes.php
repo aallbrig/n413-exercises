@@ -23,6 +23,7 @@ Route::group(['prefix'=>'exercises'], function(){
     $subMenu = Menu::find(2);
     $menu->menuItems;
     $subMenu->menuItems;
+    $content = null;
     if(Input::get('id')){
       try {
         $content = MenuItem::find(Input::get('id'))->content;
@@ -76,6 +77,10 @@ Route::group(['prefix'=>'exercises'], function(){
   });
   Route::get('7', function(){
     return View::make('pages.7');
+  });
+  Route::post('7', function(){
+    // Update entities
+    
   });
   Route::get('8', function(){
     return View::make('pages.8');
