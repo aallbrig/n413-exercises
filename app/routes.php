@@ -7,11 +7,16 @@ Route::get('/', function(){
 Route::group(['prefix'=>'exercises'], function(){
   Route::get('1', function(){
     $menu = Menu::find(1);
-    $menuItems = $menu->menuItems;
+    $menu->menuItems;
     return View::make('pages.1')->with('menu', $menu);
   });
   Route::get('2', function(){
-    return View::make('pages.2');
+    $menu = Menu::find(1);
+    $subMenu = Menu::find(2);
+    $menu->menuItems;
+    $subMenu->menuItems;
+    return View::make('pages.2')->with('menu', $menu)
+                                ->with('subMenu', $subMenu);
   });
   Route::get('3', function(){
     return View::make('pages.3');
