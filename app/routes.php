@@ -34,7 +34,25 @@ Route::group(['prefix'=>'exercises'], function(){
                                 ->with('subMenu', $subMenu)
                                 ->with('content', $content);
   });
+  // User authentication routes (GET, POST, DELETE)
   Route::get('4', function(){
+    return View::make('pages.4');
+  });
+  Route::post('4', function(){
+    // Login
+    $username = Input::get('username');
+    $password = Input::get('password');
+    if($username == 'test' && $password == 'test'){
+      Session::put('loggedIn', true);
+      return View::make('pages.4');
+    } else {
+      Session::flash('error', 'Incorrect credentials');
+      return View::make('pages.4');
+    }
+  });
+  Route::delete('4', function(){
+    // Logout
+    Session::flush();
     return View::make('pages.4');
   });
   Route::get('5', function(){
