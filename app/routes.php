@@ -46,7 +46,7 @@ Route::group(['prefix'=>'exercises'], function(){
       Session::put('loggedIn', true);
       return View::make('pages.4');
     } else {
-      Session::flash('error', 'Incorrect credentials');
+      Session::flash('error', 'Incorrect credentials.  Please try again!');
       return View::make('pages.4');
     }
   });
@@ -56,7 +56,20 @@ Route::group(['prefix'=>'exercises'], function(){
     return View::make('pages.4');
   });
   Route::get('5', function(){
-    return View::make('pages.5');
+    $view = View::make('pages.5');
+    if(Cookie::has('exercise5')){
+      $cookie = Cookie::forget('exercise5');
+      return Response::make($view)->withCookie($cookie);
+    }
+    return $view;
+  });
+  Route::post('5', function(){
+    if(Cookie::has('exercise5')){
+      Cookie::forget('exercise5');
+    }
+    $view = View::make('pages.5');
+    $cookie = Cookie::make('exercise5', 'This will expire in one minute!', 1);
+    return Response::make($view)->withCookie($cookie);
   });
   Route::get('6', function(){
     return View::make('pages.6');
