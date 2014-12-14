@@ -22,11 +22,9 @@ var CanvasExercise = function(canvasId, entityCollection){
     console.log('server sync called');
     $.post('/exercises/7', {"canvasEntities":_this.entityCollection}, "json");
   }
-  $(function(){
-    console.log('starting!');
-    _this.canvas = $(canvasId);
-    _this.ct = _this.canvas[0].getContext('2d');
-    setInterval(_this.updateMotion, 33);
-    setInterval(_this.serverSync, 5000);
-  });
+  console.log('starting!');
+  this.canvas = $(canvasId);
+  this.ct = _this.canvas[0].getContext('2d');
+  setInterval(_this.updateMotion, 33);
+  setInterval(_this.serverSync, 5000);
 }
