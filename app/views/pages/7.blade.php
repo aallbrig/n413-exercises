@@ -25,6 +25,9 @@
 @section('scripts')
 {{ HTML::script('js/7.js') }}
 <script>
-  new CanvasExercise('#canvas', {{$canvasEntities}});
+$(function(){
+  var canvasExercise = new CanvasExercise('#canvas', {{$canvasEntities}});
+  console.log(canvasExercise);
+});
 </script>
 @stop
