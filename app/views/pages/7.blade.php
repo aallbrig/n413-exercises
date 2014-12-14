@@ -20,6 +20,7 @@
     <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/public/js/7.js">Exercise 7 javascripts</a></li>
     <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/app/routes.php">Routes file (look for GET & POST for '7')</a></li>
   </ol>
+  {{$canvasEntities}}
 @stop
 
 @section('scripts')

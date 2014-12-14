@@ -1,7 +1,8 @@
 var CanvasExercise = function(canvasId, entityCollection){
   var _this = this;
-
+  console.log('1');
   this.entityCollection = entityCollection || [];
+  console.log('2');
   this.updateMotion = function(){
     console.log('update motion called');
     _this.ct.clearRect(0, 0, _this.canvas.width(), _this.canvas.height());
@@ -24,7 +25,11 @@ var CanvasExercise = function(canvasId, entityCollection){
   }
   console.log('starting!');
   this.canvas = $(canvasId);
+  console.log('3');
   this.ct = _this.canvas[0].getContext('2d');
+  console.log('4');
   setInterval(_this.updateMotion, 33);
+  console.log('5');
   setInterval(_this.serverSync, 5000);
+  console.log('6');
 }
