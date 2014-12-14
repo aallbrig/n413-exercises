@@ -27,7 +27,11 @@
 {{ HTML::script('js/7.js') }}
 <script>
 $(function(){
-  CanvasExercise('#canvas', {{$canvasEntities}});
+  console.log(window.CanvasExercise);
+  console.log(CanvasExercise);
+  window.CanvasExercise('#canvas', {{$canvasEntities}});
 });
+console.log(window.CanvasExercise);
+console.log(CanvasExercise);
 </script>
 @stop
