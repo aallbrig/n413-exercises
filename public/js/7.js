@@ -10,7 +10,11 @@ var CanvasExercise = function(canvasId, entityCollection){
     _this.entityCollection.map(function(entity){
       console.log('entity')
       console.log(entity);
-      if(entity.x > _this.canvas.width() || entity.x < 0){
+      entity.x = parseFloat(entity.x);
+      entity.y = parseFloat(entity.y);
+      console.log(typeof entity.x);
+      console.log(typeof entity.y);
+      if(parseFloat(entity.x) > _this.canvas.width() || entity.x < 0){
         entity.dx = -entity.dx;
       }
       if(entity.y > _this.canvas.height() || entity.y < 0){
