@@ -20,18 +20,13 @@
     <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/public/js/7.js">Exercise 7 javascripts</a></li>
     <li><a href="https://github.com/aallbrig/n413-exercises/blob/master/app/routes.php">Routes file (look for GET & POST for '7')</a></li>
   </ol>
-  {{$canvasEntities}}
 @stop
 
 @section('scripts')
 {{ HTML::script('js/7.js') }}
 <script>
 $(function(){
-  console.log(window.CanvasExercise);
-  console.log(CanvasExercise);
-  window.CanvasExercise('#canvas', {{$canvasEntities}});
+  CanvasExercise('#canvas', {{$canvasEntities}});
 });
-console.log(window.CanvasExercise);
-console.log(CanvasExercise);
 </script>
 @stop
