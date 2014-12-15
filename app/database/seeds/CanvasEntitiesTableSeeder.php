@@ -13,8 +13,8 @@ class CanvasEntitiesTableSeeder extends Seeder {
 		{
 			CanvasEntity::create([
         'name'=>$faker->name,
-        'x'=>rand(0,5),
-        'y'=>rand(0,5),
+        'x'=>rand(0, 100),
+        'y'=>rand(0, 100),
         'dx'=>rand(0,5),
         'dy'=>rand(0,5),
         'radius'=>rand(0,10)
