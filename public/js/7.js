@@ -14,13 +14,24 @@ var CanvasExercise = function(canvasId, entityCollection){
       entity.y = parseFloat(entity.y);
       console.log(typeof entity.x);
       console.log(typeof entity.y);
-      if(parseFloat(entity.x) > _this.canvas.width() || entity.x < 0){
+      if(entity.x > _this.canvas.width()){
+        entity.x  = _this.canvas.width();
         entity.dx = -entity.dx;
       }
-      if(entity.y > _this.canvas.height() || entity.y < 0){
+      if (entity.x < 0){
+        entity.x  = 0;
+        entity.dx = -entity.dx;
+      }
+      if(entity.y > _this.canvas.height()){
+        entity.y  = _this.canvas.height()
         entity.dy = -entity.dy;
       }
-      entity.x+=entity.dx, entity.y+=entity.dy;
+      if(entity.y < 0){
+        entity.y  = 0;
+        entity.dy = -entity.dy;
+      }
+      entity.x+=entity.dx;
+      entity.y+=entity.dy;
       _this.ct.beginPath();
       _this.ct.arc(entity.x,entity.y,entity.radius,0,2*Math.PI);
       _this.ct.stroke();
