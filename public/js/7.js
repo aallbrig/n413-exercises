@@ -22,8 +22,8 @@ var CanvasExercise = function(canvasId, entityCollection){
         entity.y  = 5;
         entity.dy = -entity.dy;
       }
-      entity.x+=entity.dx;
-      entity.y+=entity.dy;
+      entity.x += entity.dx;
+      entity.y += entity.dy;
       _this.ct.beginPath();
       _this.ct.arc(entity.x,entity.y,entity.radius,0,2*Math.PI);
       _this.ct.stroke();

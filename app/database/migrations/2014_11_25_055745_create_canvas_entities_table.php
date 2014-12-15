@@ -16,11 +16,11 @@ class CreateCanvasEntitiesTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('name');
-			$table->decimal('x');
-			$table->decimal('y');
-			$table->decimal('dx');
-			$table->decimal('dy');
-			$table->decimal('radius');
+			$table->integer('x');
+			$table->integer('y');
+			$table->integer('dx');
+			$table->integer('dy');
+			$table->integer('radius');
 			$table->timestamps();
 		});
 	}
